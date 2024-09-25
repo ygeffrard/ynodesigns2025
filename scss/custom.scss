@@ -1,0 +1,186 @@
+@import "custom-variables.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@include media-breakpoint-down(lg) {
+    :root{
+        --bs-body-font-size: calc(1rem + 0.3vw);
+    }
+}
+:focus {
+    border-width: $focus-border-width;
+    border-style: $focus-border-style;
+}
+a:focus-visible,
+a:focus {
+    text-decoration: underline;
+    outline: 0;
+}
+a {
+    border: $focus-border-width $focus-border-style transparent;
+    &:focus {
+        border-color: $white;
+    }
+}
+.btn {
+    &.btn-outline-light {
+        --bs-btn-hover-color: #{$white};
+        --bs-btn-hover-bg: transparent;
+        --bs-btn-active-bg: transparent;
+        --bs-btn-active-color: #{$white};
+    }
+    &.btn-light-primary {
+        --bs-btn-color: #{$primary};
+        --bs-btn-bg: #{$white};
+        --bs-btn-hover-color: #{$primary-hover};
+        --bs-btn-hover-bg: #{$white};
+        --bs-btn-hover-border-color: #{$primary-hover};
+    }
+    &.btn-primary {
+        --bs-btn-hover-border-color: #{$white};
+        --bs-btn-active-border-color: #{$white};
+    }
+    &:focus-visible,
+    &:focus,
+    &:hover {
+        border-style: dashed;
+        text-decoration: underline;
+    }
+}
+
+.border-hover-primary:hover,
+.border-hover-primary:focus-visible,
+.border-hover-primary:focus {
+    cursor: pointer;
+    border-color: $primary;
+    border-style: $focus-border-style;
+    border-width: $focus-border-width;
+    outline: none;
+}
+
+.space-lg-3x {
+    padding: $space-lg-3x;
+    @include media-breakpoint-down(lg) {
+        padding: 2rem 1rem;
+    }
+}
+.space-lg-4x {
+    padding: $space-lg-4x;
+    @include media-breakpoint-down(lg) {
+        padding: 3rem 1rem;
+    }
+}
+.main-header {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    &::before {
+        background: linear-gradient(180deg, rgba($gradient1, 0.9) 0%, rgba($gradient2, 0.9) 100%);
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0.9;
+    }
+}
+.bg-gradient {
+    background: linear-gradient(90deg, $gradient1 0%, $gradient2 100%) !important;
+}
+small,
+.small {
+    font-size: 1rem;
+}
+.x-small {
+    font-size: 0.75rem;
+}
+.youtube-video {
+    .youtube-btn {
+        width: 4.75rem;
+        height: 4.75rem;
+    }
+    img {
+        object-position: 0 75%;
+    }
+}
+
+.featured-list {
+    li:nth-child(odd):before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @extend .bg-gradient;
+        width: 1px;
+        top: 0;
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+    li:after {
+        margin-bottom: -2rem;
+        margin-top: 2rem;
+        height: 1px;
+        content: "";
+        display: block;
+        @extend .bg-gradient;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 0;
+            margin-top: 1.5rem;
+        }
+    }
+    li:nth-last-child(2){
+        &::after {
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+    }
+    li:nth-last-child(1) {
+        &::after {
+            display: none;
+        }
+    }
+}
+.list-check-styled {
+    list-style: none;
+    li {
+        background: url(../images/check.svg) left top no-repeat;
+        padding-left: 3.25rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.5rem;
+    }
+}
+.member-photo:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    border-radius: 0 0 400px 400px;
+    background: linear-gradient(180deg, rgba(210, 65, 65, 0.00) 25%, $gradient2 90%);
+}
+.google-map {
+    filter: grayscale(1);
+}
+.form-floating {
+    label {
+        font-size: 1rem;
+    }
+}
+@include media-breakpoint-down(lg) {
+    .partners {
+        img {
+            max-width: 5rem;
+        }
+    }
+    .half-logo {
+        max-width: 12rem;
+    }
+    .shape-logo {
+        max-width: 4rem;
+    }
+}

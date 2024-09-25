@@ -1,0 +1,86 @@
+
+// Font Families
+$font-family-sans-serif: "Poppins", sans-serif !default;
+$font-anton: "Anton", sans-serif !default;
+
+// Default Colors
+$primary: #007acc;
+$primary-hover: #0063a6;
+$gradient1: #d24141;
+$gradient2: #7c33c6;
+$white: #FFF;
+$body-color: #333;
+$light: #F7F7F7;
+$secondary: #757575;
+
+// font sizes
+$font-size-base: 1.5rem;
+@media (max-width: 576px) {
+  $font-size-base: 1rem;
+}
+
+// Gap
+$spacer: 1rem;
+
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 2,
+  5: $spacer * 3,
+  6: $spacer * 4,
+);
+
+
+// Headings
+$headings-margin-bottom: 0;
+$headings-line-height:        1.5;
+$h1-font-size: 4rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2rem;
+$h4-font-size: 1.5rem;
+
+$headings-font-weight: 700 !default;
+
+// Default Button
+$btn-padding-y: 1rem;
+$btn-padding-x: 2rem;
+$btn-font-weight: bold;
+$btn-line-height: 1.5;
+$btn-border-radius: 4rem;
+$btn-font-size: 1rem;
+
+// Large Button
+$btn-font-size-lg: 1.5rem;
+$btn-padding-y-lg: $btn-padding-y;
+$btn-padding-x-lg: $btn-padding-x;
+$btn-border-radius-lg: $btn-border-radius;
+
+
+// Border Radius
+$border-radius-xl:            1.5rem;
+$border-radius-xxl:           4rem;
+
+
+
+// Default section
+$space-lg-3x: 4rem;
+$space-lg-4x: 4.5rem;
+
+// Input style
+  
+$input-padding-y: 0.875rem;
+$input-padding-x: 1rem;
+$input-font-size: 1rem;
+$input-border-color: $secondary;
+
+
+$border-width:                2px !default;
+$focus-border-width:            $border-width;
+$focus-border-style:            dashed;
+
+
+// card
+$card-border-color:                 transparent;
+$card-border-radius:                $border-radius-xxl;
