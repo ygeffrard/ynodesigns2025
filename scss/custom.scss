@@ -184,3 +184,15 @@ small,
         max-width: 4rem;
     }
 }
+
+.max-content {
+    width: max-content;
+}
+
+textarea {
+    &.form-control {
+        .form-floating & {
+            min-height: calc($input-height * 2);
+        }
+    }
+}
