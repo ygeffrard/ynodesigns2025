@@ -11,16 +11,28 @@
     border-style: $focus-border-style;
 }
 a:focus-visible,
-a:focus {
+a:focus,
+a:hover {
     text-decoration: underline;
     outline: 0;
 }
 a {
     border: $focus-border-width $focus-border-style transparent;
-    &:focus {
+    &:focus, &:hover {
         border-color: $white;
     }
 }
+
+.go-back {
+    font-size: 1rem;
+    color: $white;
+    display: inline-block;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+    border-radius: 2rem;
+    padding-right: 1rem;
+}
+
 .btn {
     &.btn-outline-light {
         --bs-btn-hover-color: #{$white};
@@ -199,4 +211,8 @@ textarea {
 
 h2, .h2 {
     font-weight: $font-weight-semibold;
+}
+
+.banner-shape-logo {
+    top: -7.5rem;
 }
