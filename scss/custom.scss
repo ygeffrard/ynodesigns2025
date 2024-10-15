@@ -184,16 +184,18 @@ small,
     }
 }
 @include media-breakpoint-down(lg) {
-    .partners {
-        img {
-            max-width: 5rem;
-        }
-    }
     .half-logo {
         max-width: 12rem;
     }
     .shape-logo {
         max-width: 4rem;
+    }
+}
+
+.partners {
+    img {
+        max-width: 100%;
+        width: 9rem;
     }
 }
 
