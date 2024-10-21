@@ -192,10 +192,21 @@ small,
     }
 }
 
-.partners {
+.partners,
+.performances {
     img {
         max-width: 100%;
-        width: 9rem;
+        width: 16rem;
+    }
+}
+
+.top-certifications {
+    img {
+        max-width: 100%;
+        width: 8rem;
+        @include media-breakpoint-down(lg) {
+            width: 5rem;
+        }
     }
 }
 

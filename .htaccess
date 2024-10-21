@@ -1,0 +1,6 @@
+# BEGIN HTTPS Redirect
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} (www\.)?ynodesigns.com
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# END HTTPS Redirect
