@@ -21,11 +21,11 @@
     <meta property="og:title" content="YNO Designs" />
     <meta property="og:type" content="video.movie" />
     <meta property="og:video:actor" content="YNO Designs" />
-    <meta property="og:video" content="https://www.youtube.com/v/nnpXY13UfGM" />
+    <meta property="og:video" content="https://www.youtube.com/embed/nnpXY13UfGM" />
     <meta property="og:locale" content="English (United States)" />
     <meta property="og:url" content="https://YNODesigns.com">
     <meta property="og:description"
-        content="Make a splash with accessible (508/WCAG 2.1 AA), seamless user experience design and development for your software, apps, and websites, driven by what people truly need" />
+        content="Make a splash with accessible (508/WCAG 2.1 AA), seamless UX (user experience) or UI (user interface) design and development for your software, apps, and websites, driven by what people truly need" />
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +38,24 @@
     <link href="css/swiper-bundle.min.css" rel="stylesheet">
     <link href="css/aos.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2373220726353503');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=2373220726353503&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- End Meta Pixel Code -->
 
 </head>
 
@@ -58,11 +76,11 @@
                             <img class="mx-auto d-block logo" src="images/logo.svg" alt="YNO Designs" />
                         </a>
                         <div class="d-lg-flex d-none gap-3">
-                            <a class="btn btn-outline-light" href="tel:(646) 883-3966">
+                            <a class="btn btn-outline-light" href="tel:(646) 883-3966" onclick="fbq('trackCustom', 'HomePhone',{click_type:'HomePhoneClick'});">
                                 <img src="images/phone.svg" alt="" class="me-1" />(646) 883-3966</a>
-                            <a class="btn btn-outline-light" href="mailto:hi@ynodesigns.com">
+                            <a class="btn btn-outline-light" href="mailto:hi@ynodesigns.com" onclick="fbq('trackCustom', 'HomeEmail',{click_type:'HomeEmailClick'});">
                                 <img src="images/mail.svg" alt="" class="me-1" />hi@ynodesigns.com</a>
-                            <a class="btn btn-outline-light" href="https://calendly.com/ynodesigns/30min">
+                            <a class="btn btn-outline-light" href="https://calendly.com/ynodesigns/30min" onclick="fbq('trackCustom', 'HomeCalendly',{click_type:'HomeCalendlyClick'});">
                                 <img src="images/calendar.svg" alt="" class="me-1" />Book calendly</a>
                         </div>
                     </div>
@@ -72,11 +90,11 @@
                     <div class="col-lg-7">
                         <div class="d-grid gap-4 header-text">
                             <h1 class="fw-semibold" data-aos="fade-up">Friendly accessible designs</h1>
-                            <p class="mb-0" data-aos="fade-up" data-aos-delay="100">Make a splash with accessible (508/WCAG 2.1 AA), seamless user experience design and development for your software, apps, and websites, driven by what people truly need</p>
+                            <p class="mb-0" data-aos="fade-up" data-aos-delay="100">Make a splash with accessible (508/WCAG 2.1 AA), seamless UX (user experience) design and development for your software, apps, and websites, driven by what people truly need</p>
                             <div class="d-flex gap-3 top-certifications" data-aos="fade-up" data-aos-delay="200">
-                                <a href="https://clutch.co/profile/yno-designs#highlights"> <img src="images/Clutch.png" alt="Clutch reviews for YNO Designs" /> </a>
-                                <a href="https://www.google.com/maps?sca_esv=22628e78e0652884&sca_upv=1&output=search&q=yno+designs&source=lnms&fbs=AEQNm0AbzhUJjXv6jRup8eVc0BvPyH5PazCaW205cG-Bd0in0SeU-Q4GVbDidOCCAlv8ddwnuh7lPh3aYhqMJdmlhqKO8rDglsPvyMjbq9rCVLJ_yLz05yoyCj0IoTno93uYggnfsWN1FM92F-TFvqgBlLlmP8zrNwNJEd3LcLFp9n7dqviEvbckZCE_JI4OCNw2SzCBq6GPkqgWkri4s4r_BLQYM2Jsmw&entry=mc&ved=1t:200715&ictx=111"> <img src="images/Google.png" alt="Google reviews for YNO Designs" /> </a>
-                                <a href="https://dsbs.sba.gov/search/dsp_profile.cfm?SAM_UEI=W4Y2WUDJ68L1"> <img src="images/HUBZone.png" alt="HUBZone SBA certification for YNO Designs" /> </a>
+                                <a href="https://clutch.co/profile/yno-designs#highlights" onclick="fbq('trackCustom', 'HomeClutch',{click_type:'HomeClutchClick'});"> <img src="images/Clutch.png" alt="Clutch reviews for YNO Designs" /> </a>
+                                <a href="https://www.google.com/maps?sca_esv=22628e78e0652884&sca_upv=1&output=search&q=yno+designs&source=lnms&fbs=AEQNm0AbzhUJjXv6jRup8eVc0BvPyH5PazCaW205cG-Bd0in0SeU-Q4GVbDidOCCAlv8ddwnuh7lPh3aYhqMJdmlhqKO8rDglsPvyMjbq9rCVLJ_yLz05yoyCj0IoTno93uYggnfsWN1FM92F-TFvqgBlLlmP8zrNwNJEd3LcLFp9n7dqviEvbckZCE_JI4OCNw2SzCBq6GPkqgWkri4s4r_BLQYM2Jsmw&entry=mc&ved=1t:200715&ictx=111" onclick="fbq('trackCustom', 'HomeGoogleReviews',{click_type:'HomeGoogleReviewsClick'});"> <img src="images/Google.png" alt="Google reviews for YNO Designs" /> </a>
+                                <a href="https://dsbs.sba.gov/search/dsp_profile.cfm?SAM_UEI=W4Y2WUDJ68L1" onclick="fbq('trackCustom', 'HomeHUBZone',{click_type:'HomeHUBZoneClick'});"> <img src="images/HUBZone.png" alt="HUBZone SBA certification for YNO Designs" /> </a>
                             </div>
                             <p data-aos="fade-up" data-aos-delay="300"><small>Certified HUBZone, MBE (NJ State, NYC SBS, PANYNJ, NMSDC) and SBE</small></p>
                         </div>
@@ -94,11 +112,11 @@
                             </div>
                             <a href="#contact" class="btn btn-light-primary btn-lg" data-aos="fade-up" data-aos-delay="100">Get free consultation</a>
                             <div class="d-grid d-lg-none gap-3" data-aos="fade-up" data-aos-delay="100">
-                                <a class="btn btn-outline-light" href="tel:(646) 883-3966">
+                                <a class="btn btn-outline-light" href="tel:(646) 883-3966" onclick="fbq('trackCustom', 'HomePhone',{click_type:'HomePhoneClick'});">
                                     <img src="images/phone.svg" alt="" class="me-1" />(646) 883-3966</a>
-                                <a class="btn btn-outline-light" href="mailto:hi@ynodesigns.com">
+                                <a class="btn btn-outline-light" href="mailto:hi@ynodesigns.com" onclick="fbq('trackCustom', 'HomeEmail',{click_type:'HomeEmailClick'});">
                                     <img src="images/mail.svg" alt="" class="me-1" />hi@ynodesigns.com</a>
-                                <a class="btn btn-outline-light" href="https://calendly.com/ynodesigns/30min">
+                                <a class="btn btn-outline-light" href="https://calendly.com/ynodesigns/30min" onclick="fbq('trackCustom', 'HomeCalendly',{click_type:'HomeCalendlyClick'});">
                                     <img src="images/calendar.svg" alt="" class="me-1" />Book calendly</a>
                             </div>
                         </div>
@@ -114,10 +132,10 @@
                 <div class="d-grid gap-4 text-center" data-aos="fade-up" data-aos-delay="0">
                     <h2>Past performance</h2>
                     <div class="performances align-items-center justify-content-center d-flex flex-column flex-md-row column-gap-2">
-                        <a href="https://morganstanley.com/" class="btn border-hover-primary"><img src="images/performance/MorganStanley.svg" alt="" /></a>
-                        <a href="https://broadridge.com/" class="btn border-hover-primary"><img src="images/performance/Broadridge.svg" alt="" /></a>
-                        <a href="https://www.sandata.com/" class="btn border-hover-primary"><img src="images/performance/Sandata.png" alt="" /></a>
-                        <a href="https://www.consumeredge.com/" class="btn border-hover-primary"><img src="images/performance/ConsumerEdge.png" alt="" /></a>
+                        <a href="https://morganstanley.com/" class="btn border-hover-primary" onclick="fbq('trackCustom', 'PastPerformanceMorganStanley',{click_type:'PastPerformanceMorganStanleyClick'});"><img src="images/performance/MorganStanley.svg" alt="" /></a>
+                        <a href="https://broadridge.com/" class="btn border-hover-primary" onclick="fbq('trackCustom', 'PastPerformanceBroadridge',{click_type:'PastPerformanceBroadridgeClick'});"><img src="images/performance/Broadridge.svg" alt="" /></a>
+                        <a href="https://www.sandata.com/" class="btn border-hover-primary" onclick="fbq('trackCustom', 'PastPerformanceSandata',{click_type:'PastPerformanceSandataClick'});"><img src="images/performance/Sandata.png" alt="" /></a>
+                        <a href="https://www.consumeredge.com/" class="btn border-hover-primary" onclick="fbq('trackCustom', 'PastPerformanceConsumerEdge',{click_type:'PastPerformanceConsumerEdgeClick'});"><img src="images/performance/ConsumerEdge.png" alt="" /></a>
                     </div>
                     
                 </div>
@@ -131,7 +149,7 @@
                     <h2 class="text-center" data-aos="fade-up">Successes</h2>
                     <div class="row g-lg-5 g-4">
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
-                            <a href="calebs-trio-of-hope.html" class="card d-grid gap-3 rounded-5 border-hover-primary text-decoration-none">
+                            <a href="calebs-trio-of-hope.html" class="card d-grid gap-3 rounded-5 border-hover-primary text-decoration-none" onclick="fbq('trackCustom', 'SuccessCalebTrio',{click_type:'SuccessCalebTrioClick'});">
                                 <img src="images/portfolio/Calebs-Trio/Calebs-Trio.png" class="card-img-top rounded-5" alt="">
                                 <div class="card-body p-3 pb-lg-4">
                                     <h4 class="card-title">Caleb's Trio of Hope</h4>
@@ -143,7 +161,7 @@
                         </div>
 
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <a href="agency-center.html" class="card d-grid gap-3 rounded-5 border-hover-primary text-decoration-none mt-lg-5">
+                            <a href="agency-center.html" class="card d-grid gap-3 rounded-5 border-hover-primary text-decoration-none mt-lg-5" onclick="fbq('trackCustom', 'SuccessAgencyCenter',{click_type:'SuccessAgencyCenterClick'});">
                                 <img src="images/portfolio/Agency-Center/Agency-Center.png" class="card-img-top rounded-5" alt="">
                                 <div class="card-body p-3 pb-lg-4">
                                     <h4 class="card-title">Agency Center</h4>
@@ -154,7 +172,7 @@
                             </a>
                         </div>
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
-                            <a href="ms-unified-billing.html" class="card d-grid gap-3 rounded-5 border-hover-primary text-decoration-none">
+                            <a href="ms-unified-billing.html" class="card d-grid gap-3 rounded-5 border-hover-primary text-decoration-none" onclick="fbq('trackCustom', 'SuccessMSUnifiedBilling',{click_type:'SuccessMSUnifiedBillingClick'});">
                                 <img src="images/portfolio/MS-Unified-Billing/MS-Unified-Billing.png" class="card-img-top rounded-5" alt="">
                                 <div class="card-body p-3 pb-lg-4">
                                     <h4 class="card-title">MS Unified Billing</h4>
@@ -166,7 +184,7 @@
                         </div>
 
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <a href="nft-gurus.html" class="card d-grid gap-3 rounded-5 border-hover-primary text-decoration-none mt-lg-5">
+                            <a href="nft-gurus.html" class="card d-grid gap-3 rounded-5 border-hover-primary text-decoration-none mt-lg-5" onclick="fbq('trackCustom', 'Successnftgurus',{click_type:'SuccessnftgurusClick'});">
                                 <img src="images/portfolio/NFT-Gurus/NFT-Gurus.png" class="card-img-top rounded-5" alt="">
                                 <div class="card-body p-3 pb-lg-4">
                                     <h4 class="card-title">NFT Gurus</h4>
@@ -331,13 +349,13 @@
                         <h2>Core services</h2>
                         <p>We design user-friendly, accessible (508/WCAG 2.1 AA) software, apps, and websites,
                             collaborating throughout the entire process</p>
-                        <div class="pt-4"><a href="https://ynodesigns.com/YNODesigns-Capability-Statement.pdf" class="btn btn-light-primary btn-lg" data-aos="fade-up" data-aos-delay="100">Download capability statement</a></div>
+                        <div class="pt-4"><a href="https://ynodesigns.com/YNODesigns-Capability-Statement.pdf" class="btn btn-light-primary btn-lg" data-aos="fade-up" data-aos-delay="100" onclick="fbq('trackCustom', 'HomeDownloadCapabilityStatement',{click_type:'HomeDownloadCapabilityStatementClick'});">Download capability statement</a></div>
                     </div>
                     <!-- User experience design -->
 
                     <div class="bg-white py-lg-5 px-lg-4 py-4 px-3 rounded-5" data-aos="fade-up">
                         <div class="col-lg-4 px-0 mx-auto text-center">
-                            <h3 class="mb-1">User experience design</h3>
+                            <h3 class="mb-1">UX (user experience) design</h3>
                             <p>We learn, design, and improve to make your work easier and more enjoyable</p>
                         </div>
                         <div class="p-lg-4 p-3 pb-lg-0 pb-0">
@@ -602,26 +620,26 @@
                                     Get a free consultation
                                 </div>
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="mce-NAME" placeholder="" name="NAME" >
+                                    <input type="text" class="form-control" id="mce-NAME" placeholder="" name="NAME" onclick="fbq('trackCustom', 'HomeContactName',{click_type:'HomeContactNameClick'});">
                                     <label for="floatingName">Name</label>
                                 </div>
 
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="mce-EMAIL" placeholder="" name="EMAIL">
+                                    <input type="email" class="form-control" id="mce-EMAIL" placeholder="" name="EMAIL" onclick="fbq('trackCustom', 'HomeContactEmail',{click_type:'HomeContactEmailClick'});">
                                     <label for="floatingEmail">Email (required)</label>
                                 </div>
 
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control" id="mce-PHONE" placeholder="" name="PHONE">
+                                    <input type="tel" class="form-control" id="mce-PHONE" placeholder="" name="PHONE" onclick="fbq('trackCustom', 'HomeContactPhone',{click_type:'HomeContactPhoneClick'});">
                                     <label for="floatingPhone">Phone</label>
                                 </div>
 
                                 <div class="form-floating">
-                                    <textarea class="form-control " placeholder="" id="mce-MESSAGE" rows="5" name="MESSAGE"></textarea>
+                                    <textarea class="form-control " placeholder="" id="mce-MESSAGE" rows="5" name="MESSAGE" onclick="fbq('trackCustom', 'HomeContactMessage',{click_type:'HomeContactMessageClick'});"></textarea>
                                     <label for="floatingMessage">Message (required)</label>
                                 </div>
 
-                                <button class="btn btn-primary" type="submit">Submit</button>
+                                <button class="btn btn-primary" type="submit" onclick="fbq('trackCustom', 'HomeContactSubmit',{click_type:'HomeContactSubmitClick'});">Submit</button>
 
 
                             </form>
