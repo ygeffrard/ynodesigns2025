@@ -1,6 +1,7 @@
 @import "custom-variables.scss";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+
 @include media-breakpoint-down(lg) {
     :root{
         --bs-body-font-size: calc(1rem + 0.3vw);
@@ -10,16 +11,30 @@
     border-width: $focus-border-width;
     border-style: $focus-border-style;
 }
+
+@mixin outline{
+    outline: 2px dashed;
+    outline-offset: 4px;
+}
+
 a:focus-visible,
 a:focus,
 a:hover {
     text-decoration: underline;
-    outline: 0;
 }
 a {
     border: $focus-border-width $focus-border-style transparent;
     &:focus, &:hover {
         border-color: $white;
+        @include outline();
+    }
+    transition: $btn-transition;
+}
+
+.light-outline-color {
+    &:focus, 
+    &:hover {
+        outline-color: $light-outline-color;
     }
 }
 
@@ -46,6 +61,9 @@ a {
         --bs-btn-hover-color: #{$primary-hover};
         --bs-btn-hover-bg: #{$white};
         --bs-btn-hover-border-color: #{$primary-hover};
+        &:focus, &:hover{
+            outline-color: $light-outline-color;
+        }
     }
     &.btn-primary {
         --bs-btn-hover-border-color: #{$white};
@@ -54,9 +72,18 @@ a {
     &:focus-visible,
     &:focus,
     &:hover {
-        border-style: dashed;
+        border-style: $focus-border-style;
         text-decoration: underline;
+        @include outline();
+        &.btn-primary { 
+            outline-color: $dark-outline-color;
+        }
     }
+}
+
+button:focus:not(:focus-visible) {
+    @include outline();
+    outline-color: $dark-outline-color;
 }
 
 .border-hover-primary:hover,
@@ -66,7 +93,8 @@ a {
     border-color: $primary;
     border-style: $focus-border-style;
     border-width: $focus-border-width;
-    outline: none;
+    @include outline();
+    outline-color: $dark-outline-color;
 }
 
 .space-lg-3x {
@@ -82,13 +110,13 @@ a {
     }
 }
 .main-header {
-    background-image: url(../images/banner.jpg);
-    background-size: cover;
-    background-position: top center;
+    //background-image: url(../images/banner.jpg);
+    //background-size: cover;
+    //background-position: top center;
     position: relative;
     z-index: 1;
     &::before {
-        background: linear-gradient(180deg, rgba($gradient1, 0.9) 0%, rgba($gradient2, 0.9) 100%);
+        background: linear-gradient(180deg, rgba($gradient1, 1) 0%, rgba($gradient2, 1) 100%);
         content: "";
         position: absolute;
         left: 0;
@@ -191,7 +219,7 @@ small,
         max-width: 4rem;
     }
     .logo {
-        max-height: 3rem;
+        max-height: 4rem;
     }
 }
 
@@ -222,6 +250,13 @@ textarea {
         .form-floating & {
             min-height: calc($input-height * 2);
         }
+    }
+}
+
+.form-control {
+    &:focus {
+        @include outline();
+        outline-color: $dark-outline-color;
     }
 }
 

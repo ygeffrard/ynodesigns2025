@@ -6,12 +6,14 @@ $font-anton: "Anton", sans-serif !default;
 // Default Colors
 $primary: #007acc;
 $primary-hover: #0063a6;
-$gradient1: #d24141;
-$gradient2: #7c33c6;
+$gradient1: #A52727; //#d24141;
+$gradient2: #61289A; //#7c33c6;
 $white: #FFF;
 $body-color: #333;
 $light: #F7F7F7;
 $secondary: #757575;
+
+$transition-base:             all s ease-in-out !default;
 
 // font sizes
 $font-size-base: 1.5rem;
@@ -54,12 +56,14 @@ $btn-padding-y-lg: $btn-padding-y;
 $btn-padding-x-lg: $btn-padding-x;
 $btn-border-radius-lg: $btn-border-radius;
 
+// Transitions
+$btn-transition:              all .25s ease-in-out !default;
+$input-transition:            $btn-transition;
+
 
 // Border Radius
 $border-radius-xl:            1.5rem;
 $border-radius-xxl:           4rem;
-
-
 
 // Default section
 $space-lg-3x: 4rem;
@@ -75,7 +79,11 @@ $input-border-color: $secondary;
 
 $border-width:                  1px !default;
 $focus-border-width:            $border-width;
-$focus-border-style:            dashed;
+$focus-border-style:            solid; //dashed;
+
+// Accessibility outline
+$light-outline-color:           $white !default;
+$dark-outline-color:            $primary-hover !default;
 
 
 // card
