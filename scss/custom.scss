@@ -267,3 +267,10 @@ h2, .h2 {
 .banner-shape-logo {
     top: -7.5rem;
 }
+
+.nav-link {
+    border: $focus-border-width $focus-border-style transparent;
+    &:focus-visible {
+        @include outline();
+    }
+}
