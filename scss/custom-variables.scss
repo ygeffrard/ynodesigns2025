@@ -31,6 +31,24 @@ $spacers: (
   6: $spacer * 4,
 );
 
+// Navigation
+
+$navbar-nav-link-padding-x:         1.25rem;
+$navbar-padding-y:                  0;
+$navbar-padding-x:                  1.125rem;
+
+$dropdown-min-width:                10rem;
+$dropdown-padding-x:                .375rem;
+$dropdown-padding-y:                .375rem;
+$dropdown-font-size:                1rem;
+$dropdown-border-radius:            2rem;
+
+$dropdown-item-padding-y:           1rem;
+$dropdown-item-padding-x:           1.5rem;
+
+$dropdown-link-color:               white;
+$dropdown-link-hover-color:         $dropdown-link-color;
+$dropdown-link-hover-bg:            transparent;
 
 // Headings
 $headings-margin-bottom: 0;
