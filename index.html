@@ -98,88 +98,86 @@
         </div>
     </div>
 
+    <header class="site-header position-fixed top-0 start-0 end-0">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navb bg-header-gradient" data-bs-theme="dark">
+                <div class="container-fluid px-0">
+                    <a href="/" class="logo navbar-brand light-outline-color ms-3">
+                        <img class="mx-auto d-block" src="images/logo.svg" alt="YNO Designs" />
+                    </a>
+                    <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Works</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">UX Strategy and Design</a></li>
+                                    <li><a class="dropdown-item" href="#">Application / Software Development</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">CRM (Customer Relationship
+                                            Management)</a></li>
+                                    <li><a class="dropdown-item" href="#">CMS (Content Management System)</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Web 3.0</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Elevate</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Contact
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
+                                                src="images/contact.svg" />Contact form</a></li>
+                                    <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
+                                                src="images/calendar.svg" />Book calendly</a></li>
+                                    <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
+                                                src="images/phone.svg" />(646) 883-3966</a></li>
+                                    <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
+                                                src="images/mail.svg" />yg@ynodesigns.com</a></li>
+                                    <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
+                                                src="images/Linkedin.svg" />Linkedin</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- <div class="d-lg-flex d-grid gap-lg-0 gap-3 justify-content-lg-between">
+            <a href="/" class="logo light-outline-color">
+                <img class="mx-auto d-block" src="images/logo.svg" alt="YNO Designs" />
+            </a>
+            <div class="d-lg-flex d-none gap-3">
+                <a class="btn btn-outline-light" href="tel:(646) 883-3966" onclick="fbq('trackCustom', 'HomePhone',{click_type:'HomePhoneClick'});gtag('event', 'HomePhoneClick');">
+                    <img src="images/phone.svg" alt="" class="me-1" />(646) 883-3966</a>
+                <a class="btn btn-outline-light" href="mailto:hi@ynodesigns.com" onclick="fbq('trackCustom', 'HomeEmail',{click_type:'HomeEmailClick'});gtag('event', 'HomeEmailClick');">
+                    <img src="images/mail.svg" alt="" class="me-1" />hi@ynodesigns.com</a>
+                <a class="btn btn-outline-light" href="https://calendly.com/ynodesigns/30min" onclick="fbq('trackCustom', 'HomeCalendly',{click_type:'HomeCalendlyClick'});gtag('event', 'HomeCalendlyClick');">
+                    <img src="images/calendar.svg" alt="" class="me-1" />Book calendly</a>
+            </div>
+        </div> -->
+    </header>
+
     <main>
         <section class="section space-lg-3x main-header text-white">
             <div class="container d-grid gap-lg-5">
-                <header class="position-fixed start-0 end-0">
-                    <div class="container">
-                        <nav class="navbar navbar-expand-lg navb bg-header-gradient" data-bs-theme="dark">
-                            <div class="container-fluid px-0">
-                                <a href="/" class="logo navbar-brand light-outline-color ms-3">
-                                    <img class="mx-auto d-block" src="images/logo.svg" alt="YNO Designs" />
-                                </a>
-                                <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarScroll">
-                                    <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Works</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                Services
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">UX Strategy and Design</a></li>
-                                                <li><a class="dropdown-item" href="#">Application / Software Development</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">CRM (Customer Relationship
-                                                        Management)</a></li>
-                                                <li><a class="dropdown-item" href="#">CMS (Content Management System)</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">Web 3.0</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Elevate</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                Contact
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
-                                                            src="images/contact.svg" />Contact form</a></li>
-                                                <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
-                                                            src="images/calendar.svg" />Book calendly</a></li>
-                                                <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
-                                                            src="images/phone.svg" />(646) 883-3966</a></li>
-                                                <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
-                                                            src="images/mail.svg" />yg@ynodesigns.com</a></li>
-                                                <li><a class="dropdown-item" href="#"><img width="32" class="me-2"
-                                                            src="images/Linkedin.svg" />Linkedin</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                    <!-- <div class="d-lg-flex d-grid gap-lg-0 gap-3 justify-content-lg-between">
-                        <a href="/" class="logo light-outline-color">
-                            <img class="mx-auto d-block" src="images/logo.svg" alt="YNO Designs" />
-                        </a>
-                        <div class="d-lg-flex d-none gap-3">
-                            <a class="btn btn-outline-light" href="tel:(646) 883-3966" onclick="fbq('trackCustom', 'HomePhone',{click_type:'HomePhoneClick'});gtag('event', 'HomePhoneClick');">
-                                <img src="images/phone.svg" alt="" class="me-1" />(646) 883-3966</a>
-                            <a class="btn btn-outline-light" href="mailto:hi@ynodesigns.com" onclick="fbq('trackCustom', 'HomeEmail',{click_type:'HomeEmailClick'});gtag('event', 'HomeEmailClick');">
-                                <img src="images/mail.svg" alt="" class="me-1" />hi@ynodesigns.com</a>
-                            <a class="btn btn-outline-light" href="https://calendly.com/ynodesigns/30min" onclick="fbq('trackCustom', 'HomeCalendly',{click_type:'HomeCalendlyClick'});gtag('event', 'HomeCalendlyClick');">
-                                <img src="images/calendar.svg" alt="" class="me-1" />Book calendly</a>
-                        </div>
-                    </div> -->
-                </header>
-
-                <div class="header-height" style="height: 88px;"></div>
-
                 <div class="row g-3 g-lg-0 align-items-center">
                     <div class="col-lg-7">
                         <div class="d-grid gap-4 header-text">
