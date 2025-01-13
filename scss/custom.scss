@@ -7,7 +7,7 @@
         --bs-body-font-size: calc(1rem + 0.3vw);
     }
     .navbar {
-        padding: 0.75rem .5rem;
+        padding: 1rem .5rem;
         .logo {
             img {
                 max-width: 5rem;
@@ -54,6 +54,15 @@
 @mixin outline{
     outline: 2px dashed;
     outline-offset: 4px;
+}
+
+@mixin nav-blur {
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+}
+
+@mixin smooth-transition {
+    transition: all 1s ease;
 }
 
 a:focus-visible,
@@ -150,9 +159,13 @@ button:focus:not(:focus-visible) {
 }
 
 .dropdown-menu {
-    backdrop-filter: blur(80px);
-    box-shadow: 0px 20px 30px 0px #00000033;
+    //backdrop-filter: blur(80px);
+    overflow: hidden;
+
+    @include nav-blur();
     background: linear-gradient(90deg, rgba(82, 23, 23, 0.8) 0%, rgba(41, 16, 67, 0.8) 78.85%, rgba(103, 70, 101, 0.8) 98.57%);
+    box-shadow: 0px 20px 30px 0px #00000033;
+    
 
     .dropdown-item {
         margin: 0 .25rem;
@@ -206,7 +219,7 @@ header {
     //background-image: url(../images/banner.jpg);
     //background-size: cover;
     //background-position: top center;
-    margin-top: 7rem;
+    margin-top: 4rem;
     position: relative;
     &::before {
         background: linear-gradient(180deg, rgba($gradient1, 1) 0%, rgba($gradient2, 1) 100%);
@@ -216,35 +229,26 @@ header {
         right: 0;
         top: -7rem;
         bottom: 0;
-        z-index: -1;
+        /*z-index: -1;
         opacity: 0.9;
         @include media-breakpoint-down(lg) {
             top: -4.75rem;
-        }
+        }*/
     }
-    @include media-breakpoint-down(lg) {
+    /*@include media-breakpoint-down(lg) {
         margin-top: 4.75rem;
-    }
+    }*/
 }
 
 .site-header {
     //background-image: url(../images/banner.jpg);
     //background-size: cover;
     //background-position: top center;
-    margin-top: 2rem;
-    padding: 0 1rem;
-    @include media-breakpoint-down(lg) {
+    //margin-top: 2rem;
+    padding: 1rem;
+    /*@include media-breakpoint-down(lg) {
         margin-top: 1rem;
-    }
-    .bg-header-gradient {
-        border-radius: $border-radius-xxl;
-        background: linear-gradient(90deg, rgba(82, 23, 23, 0.8) 0%, rgba(41, 16, 67, 0.8) 78.85%, rgba(103, 70, 101, 0.8) 98.57%);
-        box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        @include media-breakpoint-down(lg) {
-            border-radius: 1.875rem;
-        }
-    }
+    }*/
     .nav-link {
         border: none;
         font-size: 1rem;
@@ -258,15 +262,28 @@ header {
         &:hover,
         &:focus {
             outline-width: 1px;
-            outline-offset: 0;
+            outline-offset: 2px;
             outline-style: solid;
             background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 30%, rgba(41, 16, 67, 0.2) 70%);
         }
     }
 }
+.bg-header-gradient {
+    border-radius: $border-radius-xxl;
+    background: linear-gradient(90deg, rgba(82, 23, 23, 0.8) 0%, rgba(41, 16, 67, 0.8) 78.85%, rgba(103, 70, 101, 0.8) 98.57%);
+    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.2);
+    @include nav-blur();
+    //border: 1px solid rgba(255, 255, 255, 0.1);
+    @include media-breakpoint-down(lg) {
+        border-radius: 1.875rem;
+    }
+}
 .bg-gradient {
     background: linear-gradient(90deg, $gradient1 0%, $gradient2 100%) !important;
 }
+/*.navbar, .dropdown-menu {
+    will-change: backdrop-filter;
+}*/
 small,
 .small {
     font-size: 1rem;
