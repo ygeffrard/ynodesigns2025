@@ -893,40 +893,43 @@
     <script defer src="js/swiper-bundle.min.js"></script>
 
     <script defer>
-document.addEventListener('DOMContentLoaded', async () => {
+
+    
+    document.addEventListener('DOMContentLoaded', async () => {
 
 
-            const parentMenuItems = document.querySelector('.navbar-nav');
+        const parentMenuItems = document.querySelector('.navbar-nav');
 
-                if (parentMenuItems) {
+            if (parentMenuItems) {
                 // Target only the <li class="nav-item"> elements
-                const navItems = parentMenuItems.querySelectorAll('li.nav-item');
+                const navItems = parentMenuItems.querySelectorAll('.navbar-nav > li.nav-item');
 
                 // Function to set AOS attributes dynamically
                 const setAOSAttributes = () => {
                     return new Promise((resolve) => {
-                    navItems.forEach((item, index) => {
-                        // Set AOS animation if not already set
-                        item.dataset.aos = item.dataset.aos || 'fade-in';
+                        navItems.forEach((item, index) => {
+                            // Set AOS animation if not already set
+                            item.dataset.aos = item.dataset.aos || 'fade-in';
 
-                        // Add delay incrementally
-                        item.dataset.aosDelay = (index + 1) * 150;
+                            // Add delay incrementally
+                            item.dataset.aosDelay = (index + 1) * 150;
 
-                        // Use IntersectionObserver to trigger animations
-                        const observer = new IntersectionObserver(
-                        ([entry]) => {
-                            if (entry.isIntersecting) {
-                            observer.disconnect(); // Stop observing after triggering 
-                            }
-                        },
-                        { threshold: 0.1 } // Adjust threshold for visibility
-                        );
+                            // Use IntersectionObserver to trigger animations
+                            const observer = new IntersectionObserver(
+                                ([entry]) => {
+                                    if (entry.isIntersecting) {
+                                        observer.disconnect(); // Stop observing after triggering 
+                                    }
+                                }, {
+                                    threshold: 0.1
+                                } // Adjust threshold for visibility
+                            );
 
-                        observer.observe(item);
-                    });
+                            observer.observe(item);
+                        });
 
-                    // Resolve promise after processing all navItems
-                    resolve();
+                        // Resolve promise after processing all navItems
+                        resolve();
                     });
                 };
 
@@ -934,34 +937,78 @@ document.addEventListener('DOMContentLoaded', async () => {
                 await setAOSAttributes();
                 setTimeout(() => {
                     AOS.init({
-                    duration: 1200,
-                    once: true,
-                });
+                        duration: 1200,
+                        once: true,
+                    });
                 }, 100);
-                }
-            
-            var swiper = new Swiper(".googleReviews", {
-                loop: true,
-                breakpoints: {
-                    480: {
-                        slidesPerView: 1,
-                        spaceBetween: 0
-                    },
-                    1023: {
-                        slidesPerView: 2,
-                        spaceBetween: 32
-                    },
-                    1365: {
-                        slidesPerView: 3,
-                        spaceBetween: 32
-                    },
-                }
+            }
 
+            var dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+        // Loop through each dropdown menu to initialize the mutation observer
+        dropdownMenus.forEach(function (dropdownMenu) {
+            // MutationObserver to detect class changes (for 'show' class)
+            var observer = new MutationObserver(function (mutationsList) {
+                mutationsList.forEach(function (mutation) {
+                    // If the 'show' class is added or removed
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                        if (dropdownMenu.classList.contains('show')) {
+                            // Select all child 'li' elements
+                            var listItems = dropdownMenu.querySelectorAll('li');
+                            
+                            // Add AOS attributes and delay to each list item
+                            listItems.forEach(function (item, index) {
+                                // Add aos attribute with fade-in effect and dynamic delay
+                                item.setAttribute('data-aos', 'fade-in');
+                                item.setAttribute('data-aos-delay', (index + 1) * 100); // Delay increases by 100ms per item
+                            });
+
+                            // Reinitialize AOS when 'show' class is added (refresh animations)
+                            AOS.init({
+                                duration: 1200,
+                            });
+                            AOS.refresh();  // Trigger AOS animations with the applied delays
+                        } else {
+                            // If 'show' class is removed, clear animation attributes from each li element
+                            var listItems = dropdownMenu.querySelectorAll('li');
+                            
+                            listItems.forEach(function (item) {
+                                // Remove AOS attributes to stop any applied animations
+                                item.removeAttribute('data-aos');
+                                item.removeAttribute('data-aos-delay');
+                                item.classList.remove('aos-init');
+                                item.classList.remove('aos-animate');
+            
+                            });
+                        }
+                    }
+                });
             });
+
+            // Observe changes to the class attribute of the dropdown menu
+            observer.observe(dropdownMenu, { attributes: true });
+        });
+
+        var swiper = new Swiper(".googleReviews", {
+            loop: true,
+            breakpoints: {
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                1023: {
+                    slidesPerView: 2,
+                    spaceBetween: 32
+                },
+                1365: {
+                    slidesPerView: 3,
+                    spaceBetween: 32
+                },
+            }
 
         });
 
-
+        });
     </script>
 </body>
 
