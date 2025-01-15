@@ -100,9 +100,9 @@
 
     <header class="site-header position-fixed top-0 start-0 end-0">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navb bg-header-gradient" data-bs-theme="dark">
+            <nav class="navbar navbar-expand-lg navb bg-header-gradient" data-aos="fade-down" data-bs-theme="dark">
                 <div class="container-fluid px-0">
-                    <a href="/" class="logo navbar-brand light-outline-color ms-3">
+                    <a href="/" class="logo navbar-brand light-outline-color ms-3" data-aos="fade-in" data-aos-delay="200">
                         <img class="mx-auto d-block" src="images/logo.svg" alt="YNO Designs" />
                     </a>
                     <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
@@ -160,19 +160,6 @@
                 </div>
             </nav>
         </div>
-        <!-- <div class="d-lg-flex d-grid gap-lg-0 gap-3 justify-content-lg-between">
-            <a href="/" class="logo light-outline-color">
-                <img class="mx-auto d-block" src="images/logo.svg" alt="YNO Designs" />
-            </a>
-            <div class="d-lg-flex d-none gap-3">
-                <a class="btn btn-outline-light" href="tel:(646) 883-3966" onclick="fbq('trackCustom', 'HomePhone',{click_type:'HomePhoneClick'});gtag('event', 'HomePhoneClick');">
-                    <img src="images/phone.svg" alt="" class="me-1" />(646) 883-3966</a>
-                <a class="btn btn-outline-light" href="mailto:hi@ynodesigns.com" onclick="fbq('trackCustom', 'HomeEmail',{click_type:'HomeEmailClick'});gtag('event', 'HomeEmailClick');">
-                    <img src="images/mail.svg" alt="" class="me-1" />hi@ynodesigns.com</a>
-                <a class="btn btn-outline-light" href="https://calendly.com/ynodesigns/30min" onclick="fbq('trackCustom', 'HomeCalendly',{click_type:'HomeCalendlyClick'});gtag('event', 'HomeCalendlyClick');">
-                    <img src="images/calendar.svg" alt="" class="me-1" />Book calendly</a>
-            </div>
-        </div> -->
     </header>
 
     <main>
@@ -905,11 +892,53 @@
     <script defer src="js/swiper-bundle.min.js"></script>
 
     <script defer>
-        document.addEventListener('DOMContentLoaded', function () {
-            AOS.init({
-                duration: 1200,
-                once: true,
-            });
+document.addEventListener('DOMContentLoaded', async () => {
+
+
+            const parentMenuItems = document.querySelector('.navbar-nav');
+
+                if (parentMenuItems) {
+                // Target only the <li class="nav-item"> elements
+                const navItems = parentMenuItems.querySelectorAll('li.nav-item');
+
+                // Function to set AOS attributes dynamically
+                const setAOSAttributes = () => {
+                    return new Promise((resolve) => {
+                    navItems.forEach((item, index) => {
+                        // Set AOS animation if not already set
+                        item.dataset.aos = item.dataset.aos || 'fade-in';
+
+                        // Add delay incrementally
+                        item.dataset.aosDelay = (index + 1) * 150;
+
+                        // Use IntersectionObserver to trigger animations
+                        const observer = new IntersectionObserver(
+                        ([entry]) => {
+                            if (entry.isIntersecting) {
+                            observer.disconnect(); // Stop observing after triggering 
+                            }
+                        },
+                        { threshold: 0.1 } // Adjust threshold for visibility
+                        );
+
+                        observer.observe(item);
+                    });
+
+                    // Resolve promise after processing all navItems
+                    resolve();
+                    });
+                };
+
+                // Wait until attributes are set
+                await setAOSAttributes();
+                setTimeout(() => {
+                    AOS.init({
+                    duration: 1200,
+                    once: true,
+                });
+                }, 100);
+                }
+            
             var swiper = new Swiper(".googleReviews", {
                 loop: true,
                 breakpoints: {
@@ -930,6 +959,8 @@
             });
 
         });
+
+
     </script>
 </body>
 
